@@ -18,5 +18,5 @@
         if (enthaltung.classList.contains('btn-info') === false) {
             enthaltung.click();
         }
-    }, 5000);
+    }, Math.round(Math.random() * 10 + 5) * 1000);
 })();
