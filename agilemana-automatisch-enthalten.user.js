@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AgileMana - Automatisch enthalten
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Setzt beim Schätzen den Status automatisch auf den Status "Enthaltung".
 // @author       Stephan Niewerth
 // @match        https://agilemana.com/rooms/*
