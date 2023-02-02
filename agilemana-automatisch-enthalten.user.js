@@ -3,6 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Setzt beim Schätzen den Status automatisch auf den Status "Enthaltung".
+// @author       Stephan Niewerth
 // @match        https://agilemana.com/rooms/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=agilemana.com
 // @grant        none
