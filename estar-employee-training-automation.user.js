@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Web Based Employee Training by Estar GmbH - Automatisiert
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Durchläuft alle Hinweisbögen automatisch. Die richtigen Antworten zu den Fragen werden automatisch angehakt.
 // @author       Stephan Niewerth
 // @match        https://heise.estargmbh.de/admin/render.php*
@@ -20,9 +20,28 @@
         'Folgender Fall: Ein Kollege aus dem Nachbarbüro, mit dem Sie ein sehr gutes Arbeitsverhältnis haben, fragt Sie nach der privaten Telefonnummer eines gemeinsamen Arbeitskollegen. Wie würden Sie handeln?': [
             'Ich bitte den Kollegen, dass er selbst nach der Rufnummer fragt.',
         ],
+        'In welchen Fällen dürfen personenbezogene Daten u. a. verarbeitet werden?': [
+            'Wenn die Verarbeitung erforderlich ist, damit die verantwortliche Person eine ihr obliegende rechtliche Verpflichtung erfüllen kann.',
+            'Wenn die betroffene Person in die Verarbeitung eingewilligt hat.',
+        ],
         'Sie verlassen während der Pause Ihren Arbeitsplatz. Wie sichern Sie Ihren Arbeitsplatz, damit kein Datenmissbrauch stattfinden kann?': [
             'Ich sperre den PC, sodass der PC erst mit Eingabe des Passwortes wieder bedient werden kann.',
             'Ich schließe, wenn möglich, meine Tür ab.',
+        ],
+        'Sie werden aufgefordert, sich ein neues Passwort für eine firmeninterne Anwendung auszudenken. Wie sollte dieses Passwort nach Möglichkeit aussehen?': [
+            'Mein Passwort besteht aus einer von mir ausgedachten Kombination aus Zahlen, Groß- und Kleinbuchstaben sowie Sonderzeichen in einer mindestens 10-stelligen Kombination.',
+        ],
+        'Was fällt NICHT unter personenbezogene Daten?': [
+            'Die Umsatzzahlen einer GmbH für das letzte Geschäftsjahr',
+        ],
+        'Was können Folgen beim Verstoß gegen den Datenschutz sein?': [
+            'Freiheitsstrafe bis zu drei Jahren',
+            'Arbeitsrechtliche Konsequenzen bis hin zur Kündigung',
+            'Zahlung von Bußgeld',
+        ],
+        'Was müssen Sie beim Umgang mit E-Mails berücksichtigen?': [
+            'Ich lösche E-Mails, in denen ich aufgefordert werde, dubiose Links anzuklicken, sofort und informiere die IT-Abteilung.',
+            'Ich versende vertrauliche Informationen über E-Mail grundsätzlich nicht, wenn keine Verschlüsselung genutzt werden kann.',
         ],
         'Welche der folgenden Datenverarbeitungen sind korrekt?': [
             'Ich erhalte eine Anfrage per E-Mail. Da ich hierzu keine Auskunft geben kann, leite ich diese E-Mail an den Sachbearbeiter weiter, der diese beantworten kann.',
@@ -55,6 +74,9 @@
             'Eine starke Blutung kann zum Schock führen.',
             'Ein Schock kann zum Tod führen.',
         ],
+        'Welche Unfälle müssen im Meldeblock eingetragen werden?': [
+            'Jeder Unfall, der während einer versicherten Tätigkeit entstanden ist.',
+        ],
         'Wer ist zur Leistung von Erster Hilfe verpflichtet?': [
             'Jeder, da dies sonst den Tatbestand der unterlassenen Hilfeleistung erfüllt.',
         ],
@@ -62,7 +84,7 @@
             '30 Herzdruckmassagen zu 2 Mal Beatmen.',
         ],
 
-        // Verwaltungsarbeitsplatz v1.0
+        // Verwaltungsarbeitsplatz v1.1
         'Die meisten Unfälle im Verwaltungsbereich ereignen sich durch Stolpern, Ausrutschen und Stürzen. Welche Aussagen sind richtig?': [
             'Verkehrs- und Fluchtwege dürfen nicht als Lagerfläche genutzt werden.',
             'Ich halte Fluchttüren immer frei.',
@@ -90,7 +112,6 @@
             'Last möglichst nahe am Körper tragen, damit die Wirbelsäule nicht überlastet wird.',
         ],
     };
-
 
     const fragebogenForm = document.querySelector('#fragebogenForm');
     if (fragebogenForm) {
