@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Web Based Employee Training by Estar GmbH - Automatisiert
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Durchläuft alle Hinweisbögen automatisch. Die richtigen Antworten zu den Fragen werden automatisch angehakt.
 // @author       Stephan Niewerth
 // @match        https://heise.estargmbh.de/admin/render.php*
@@ -50,6 +50,24 @@
         'Welche Rechte stehen Ihnen zu, wenn Ihre Daten verarbeitet wurden?': [
             'Ich habe ein Auskunftsrecht bei der Stelle, die meine Daten verarbeitet hat.',
             'Ich kann veranlassen, dass meine Daten, die unrechtmäßig verarbeitet wurden, gelöscht werden.',
+        ],
+
+        // Elektro/Hybridfahrzeuge
+        'Welche Voraussetzung zum kostenlosen Parken an einer Ladesäule im öffentlichen Raum gelten für E-Autos?': [
+            'Gültiges E-Kennzeichen am Auto',
+        ],
+        'Bitte vervollständigen Sie den folgenden Satz: "Ein Elektrofahrzeug ..."': [
+            '... ist immer nur so sauber wie der geladene Strom.',
+        ],
+        'Was sollten Sie vor jedem Ladevorgang eines Elektrofahrzeugs tun?': [
+            'Immer eine Sichtprüfung durchführen.',
+        ],
+        'Ist folgende Aussage korrekt: "Bitte bedenken Sie, dass das Laden Ihres E-Fahrzeugs zuhause teurer ist, als an einer öffentlichen Ladestation mit Gleichstrom"?': [
+            'Nein',
+        ],
+        'Ein Bekannter von Ihnen denkt darüber nach, sich ein Elektrofahrzeug anzuschaffen und fragt Sie nach Ihrer Expertise im Zusammenhang mit der Ladekapazität der Akkus. Was sagen Sie ihm?': [
+            'Vollladen und vollständiges Entladen sollte vermieden werden.',
+            'Häufiges Schnellladen sollte vermieden werden.',
         ],
 
         // Erste Hilfe v8.8
